@@ -66,6 +66,29 @@ npm run lint
 
 Runs ESLint across the project.
 
+## Deploy to Render
+
+This app can be deployed to Render as a Static Site.
+
+The repo includes `render.yaml` with the required settings:
+
+- Build command: `npm install && npm run build`
+- Publish directory: `dist`
+
+To publish it:
+
+1. Push this repository to GitHub, GitLab, or Bitbucket.
+2. In Render, create a new Static Site.
+3. Connect the repository.
+4. If Render detects `render.yaml`, use that Blueprint config. If you enter values manually, use:
+
+```text
+Build Command: npm install && npm run build
+Publish Directory: dist
+```
+
+Because this project is a Vite static app and does not require a server, deploy it as a static site instead of a Node web service.
+
 ## Project Structure
 
 ```text
