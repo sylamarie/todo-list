@@ -2,6 +2,10 @@
 
 A small React + Vite todo app with local persistence, task filtering, and a polished responsive UI.
 
+## Live Demo
+
+Deployment URL: https://todolist-f8fc.onrender.com
+
 ## Features
 
 - Add tasks with basic input validation
@@ -69,6 +73,8 @@ Runs ESLint across the project.
 ## Deploy to Render
 
 This app can be deployed to Render as a Static Site.
+
+Live deployment: https://todolist-f8fc.onrender.com
 
 The repo includes `render.yaml` with the required settings:
 
