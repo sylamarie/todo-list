@@ -1,12 +1,85 @@
-# React + Vite
+# Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React + Vite todo app with local persistence, task filtering, and a polished responsive UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add tasks with basic input validation
+- Mark tasks as complete or active
+- Filter by `All`, `Active`, or `Completed`
+- Remove individual tasks
+- Clear all completed tasks
+- Persist todos in `localStorage`
+- Show active/completed counts and overall progress
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite 7
+- ESLint 9
+
+## Getting Started
+
+Make sure you have Node.js installed, then run the project from the repo root:
+
+```powershell
+npm install
+npm run dev
+```
+
+Vite will print a local development URL, usually:
+
+```text
+http://localhost:5173/
+```
+
+If PowerShell blocks `npm`, use `npm.cmd` instead:
+
+```powershell
+npm.cmd install
+npm.cmd run dev
+```
+
+## Available Scripts
+
+```powershell
+npm run dev
+```
+
+Starts the Vite development server.
+
+```powershell
+npm run build
+```
+
+Creates a production build in `dist/`.
+
+```powershell
+npm run preview
+```
+
+Serves the production build locally for preview.
+
+```powershell
+npm run lint
+```
+
+Runs ESLint across the project.
+
+## Project Structure
+
+```text
+src/
+  App.jsx
+  NewTodoForm.jsx
+  TodoItem.jsx
+  TodoList.jsx
+  main.jsx
+  styles.css
+```
+
+## Notes
+
+- Todo data is stored in the browser under the `ITEMS` local storage key.
+- New tasks are added to the top of the list.
+- Existing saved items without timestamps still work; the app handles them safely.
